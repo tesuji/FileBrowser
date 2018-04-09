@@ -63,10 +63,10 @@ Key | Action
 
 ### TODO
 
-- Add handler for menu bar
-- Test suits
-- Add Travis CI build tests
-- Beautify [Keyboards.htm](TotalCommander/Keyboards.htm)
+- [ ] Add handler for menu bar
+- [ ] Test suits
+- [ ] Add Travis CI build tests
+- [x] Beautify [Keyboards.html](TotalCommander/Keyboards.html)
 
 ### Meta
 
