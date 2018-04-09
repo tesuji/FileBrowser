@@ -12,7 +12,7 @@ Copy (<kbd>Ctrl</kbd>+<kbd>C</kbd>) | Use Clipboard to create file list that nee
 Move (<kbd>Ctrl</kbd>+<kbd>X</kbd>) | Like above
 Paste (<kbd>Ctrl</kbd>+<kbd>V</kbd>) | Paste file and folder from list in Clipboard to target folder
 Delete (<kbd>Delete</kbd> or <kbd>Shift</kbd>+<kbd>Delete</kbd>) (Many file and folder) | Use `Microsoft.VisualBasic.FileIO.FileSystem.DeleFile` and `FileSystem.DeleDirectory` to delete file and display familiar delete-file-prompt message box
-Rename (<kbd>F2</kbd>) (Many file and folder) | Set `LabelEdi` attritube of ListView and implement handler for `AfterLabelEdit` event
+Rename (<kbd>F2</kbd>) (Many file and folder) | Set `LabelEdit` attritube of `ListView` and implement handler for `AfterLabelEdit` event
 Find (<kbd>Ctrl</kbd>+<kbd>F</kbd>) | Use seperate `FormFileFinds` form to search for files, where using `DirectoryInfo.GetFiles` and `DirectoryInfo.GetDirectories`
 View in detail or in list | Set `View.Details` or `View.List`
 Sort file in column | Implement handler for `ColumnClick` event with comparers such as `CompareFileName`, `CompareFileExtension`, `CompareFileSize`, etc
@@ -65,11 +65,11 @@ Key | Action
 
 - Add handler for menu bar
 - Test suits
-- Add Travis CI test
-- Beautify `Totalcommander/Keyboards.htm`
+- Add Travis CI build tests
+- Beautify [Keyboards.htm](TotalCommander/Keyboards.htm)
 
 ### Meta
 
 - Written by @lzutao
-- Release under GPLv3 License
+- Release under [GPLv3 License](LICENSE)
 - Software is as is - no warranty expressed or implied.
