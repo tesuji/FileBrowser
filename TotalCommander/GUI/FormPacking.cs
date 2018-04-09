@@ -15,7 +15,7 @@ namespace TotalCommander.GUI
     {
         string[] arrPaths;
         static readonly string Path7za = @"7za.exe";
-        static readonly string SevenZipHash256 = "59DF28612EE340037001ACF8EC39A624581F37A01C4F231A62B99873D4793482";
+        static readonly string SevenZipHash256 = "E6855553350FA6FB23E05839C7F3EF140DAD29D9A0E3495DE4D1B17A9FBF5CA4";
         static bool Is7zaExistAndTrusted = false;
 
         public static string GetSha256HexString(string fullPath)
@@ -209,13 +209,13 @@ namespace TotalCommander.GUI
                     switch (x.ExitCode)
                     {
                         case 0: break;
-                        case 1: FatalError(this.FindForm(), @"Warning (Non fatal error(s)). 
+                        case 1: FatalError(this.FindForm(), @"Warning (Non fatal error(s)).
 For example, one or more files were locked by some other application, so they were not compressed.",
                                                                                                        MessageBoxIcon.Information);
                             break;
                         case 2: FatalError(this.FindForm(), "Some errors occur"); break;
                         case 7: FatalError(this.FindForm(), "Arguments errors occur" + Environment.NewLine +
-                           pInfo.Arguments ); 
+                           pInfo.Arguments );
                             break;
                         case 8: FatalError(this.FindForm(), "Not enough sufficient memory for operation"); break;
                         case 255: FatalError(this.FindForm(), "User stops the operation"); break;
