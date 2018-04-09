@@ -11,7 +11,7 @@ Function (Shortcut) | How to implement
 Copy (<kbd>Ctrl</kbd>+<kbd>C</kbd>) | Use Clipboard to create file list that needed to copy. In cut, use additional flag CanCut in order to delete file after Cut.
 Move (<kbd>Ctrl</kbd>+<kbd>X</kbd>) | Like above
 Paste (<kbd>Ctrl</kbd>+<kbd>V</kbd>) | Paste file and folder from list in Clipboard to target folder
-Delete (<kbd>Delete</kbd> or <kbd>Shift</kbd>+<kbd>Delete</kbd>) (Many file and folder) | Use `Microsoft.VisualBasic.FileIO.FileSystem.DeleFile` and `FileSystem.DeleDirectory` to delete file and display familiar delete-file-prompt message box
+Delete (<kbd>Delete</kbd> or <kbd>Shift</kbd>+<kbd>Delete</kbd>) (Many file and folder) | Use `Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile` and `FileSystem.DeleteDirectory` to delete file and display familiar delete-file-prompt message box
 Rename (<kbd>F2</kbd>) (Many file and folder) | Set `LabelEdit` attritube of `ListView` and implement handler for `AfterLabelEdit` event
 Find (<kbd>Ctrl</kbd>+<kbd>F</kbd>) | Use seperate `FormFileFinds` form to search for files, where using `DirectoryInfo.GetFiles` and `DirectoryInfo.GetDirectories`
 View in detail or in list | Set `View.Details` or `View.List`
