@@ -302,7 +302,7 @@ namespace TotalCommander.GUI
             switch (flag)
             {
                 // Neither item is a folder => Compare names
-                case 0: goto case 3;
+                case 0: goto case 3; break;
                 // A is a folder, but B isn't => A < B
                 case 1: result = -1; break;
                 // B is a folder, but A isn't => A > B

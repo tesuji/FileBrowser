@@ -133,8 +133,8 @@ namespace TotalCommander
         void tsmiAbout_Click(object sender, EventArgs e)
         {
             string caption = "About Total Commander";
-            string text = @"Total Commander Version 2.0.1 (2017-05-20)
-15520599 - Tran Cao Phap";
+            string text = @"Total Commander Version 0.9.1.1 (2018-04-09)
+lzutao @ Github";
             MessageBox.Show(text, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

@@ -65,6 +65,8 @@ Key | Action
 
 - Add handler for menu bar
 - Test suits
+- Add Travis CI test
+- Beautify `Totalcommander/Keyboards.htm`
 
 ### Meta
 
