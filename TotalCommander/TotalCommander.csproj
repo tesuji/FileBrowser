@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B3B6A1D-2373-42BD-9216-5E6265E9BB83}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TotalCommander</RootNamespace>
+    <AssemblyName>TotalCommander</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>totalCommander.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="GUI\DisksBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\FileBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\FormFindFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormFindFiles.Designer.cs">
+      <DependentUpon>FormFindFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormPacking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormPacking.Designer.cs">
+      <DependentUpon>FormPacking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormNewFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormNewFolder.Designer.cs">
+      <DependentUpon>FormNewFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HtmlBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HtmlBrowser.Designer.cs">
+      <DependentUpon>HtmlBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ListViewColumnSorter.cs" />
+    <Compile Include="GUI\ListViewExtensions.cs" />
+    <Compile Include="GUI\NavigationPane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ShellBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ShellBrowser.Designer.cs">
+      <DependentUpon>ShellBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShellContextMenu.cs" />
+    <Compile Include="ShellIcon.cs" />
+    <Compile Include="PropertiesDialog.cs" />
+    <Compile Include="Form_TotalCommander.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TotalCommander.Designer.cs">
+      <DependentUpon>Form_TotalCommander.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShellHistory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShellInfoItem.cs" />
+    <EmbeddedResource Include="Form_TotalCommander.resx">
+      <DependentUpon>Form_TotalCommander.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormFindFiles.resx">
+      <DependentUpon>FormFindFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormPacking.resx">
+      <DependentUpon>FormPacking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormNewFolder.resx">
+      <DependentUpon>FormNewFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HtmlBrowser.resx">
+      <DependentUpon>HtmlBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ShellBrowser.resx">
+      <DependentUpon>ShellBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_archive_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_arrow_upward_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cancel_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_chevron_left_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_chevron_right_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_close_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_refresh_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_search_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_unarchive_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-view-pane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Details-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-view-pane1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit File-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rename-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_tree_icon.png" />
+    <None Include="Resources\Add_Folder.png" />
+    <None Include="Resources\Add_File1.png" />
+    <Content Include="7za.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Keyboards.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Show_Password_24.png" />
+    <Content Include="totalCommander.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
